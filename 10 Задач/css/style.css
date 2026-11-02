@@ -1,0 +1,12 @@
+section{
+    width: 95%;
+    border: 3px solid rgb(0, 32, 34);
+    border-radius: 1rem;
+    padding: 1%;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 192);
+}
+body{
+    background-color: rgba(35, 10, 59, 0.993);
+}

@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: var(--accent);
+}
+
+:root {
+  /* Цвета и фоны */
+  --page: #f4f5f8;            /* Фон страницы */
+  --paper: #ffffff;           /* Шапка, карточки, таблица */
+  --ink: #172238;             /* Основной текст */
+  --accent: #4338ca;          /* Акцент и фокус */
+  --line: #d7dbe5;            /* Границы */
+  --hero-bg: #dfe5ff;         /* Фон заметки в hero */
+  --cover-html: #dce3ff;      /* Первая обложка */
+  --cover-css: #f7dcc6;       /* Вторая обложка */
+  --cover-js: #cfebdf;        /* Третья обложка */
+  --overlay: #172238;         /* Непрозрачный слой первой обложки */
+  --on-overlay: #ffffff;      /* Текст на тёмном фоне */
+  --table-head: #e8eaf2;      /* Фон заголовков таблицы */
+
+  /* Размеры, отступы и сетка */
+  --space: 1rem;              /* Базовый отступ */
+  --gutter: 1rem;             /* Боковое поле контейнера */
+  --gap-cards: 1.25rem;       /* Промежуток между карточками */
+  --radius: 1rem;             /* Скругление крупных блоков */
+  --content: 72rem;           /* Максимальная ширина контейнера */
+
+  /* Границы и фокус */
+  --border-width: 1px;        /* Тонкая граница */
+  --focus-width: 3px;         /* Толщина фокусной рамки */
+  --focus-offset: 4px;        /* Расстояние рамки от элемента */
+
+  /* Анимация */
+  --transition-fast: 180ms;   /* Время появления слоя */
+}
+
+/* Экран 1440px и меньше: 3 колонки */
+@media (max-width: 1440px) {
+    .card_container {
+        grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    }    
+}
+
+/* Экран 768px и меньше: 2 колонки */
+@media (max-width: 768px) {
+    .card_container {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }    
+}
+
+/* Экран 360px и меньше: 1 колонка */
+@media (max-width: 360px) {
+    .card_container {
+        grid-template: repeat(3, 1fr) / repeat(1, 1fr);
+    }    
+}
+
+body {
+  background-color: var(--hero-bg);
+  color: var(--ink);
+}
+
+.container {
+  
+  width: min(calc(100% - var(--gutter) * 2), var(--content)); 
+
+  margin-inline: auto;
+} 
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+header nav ul{
+  display: flex;
+  gap: var(--space);
+}
+main{
+  background-color: var(--hero-bg);
+}
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero article{
+  display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.hero article:last-child{
+  background-color: #4438ca48;
+  height:200px;
+  width: 400px;
+  display: flex;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+.hero article:last-child h2{
+  font-size: 2rem;
+}
+.btn{
+  height: 40px;
+  width: 150px;
+  background-color: var(--accent);
+  color: var(--paper);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section{
+  margin-bottom: 30px;
+}
+
+.card_container{
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--gap-cards);
+}
+.card{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--paper);
+}
+.card-image{
+  border-radius: inherit;
+}
+.card-image h2{
+  font-size: 4rem;
+}
+.card[id="1"] .card-image{
+background-color: #9791d3;
+}
+.card[id="2"] .card-image{
+background-color: #ffe0b8;
+}
+.card[id="3"] .card-image{
+background-color: #cdf8cd;
+}
+.card-image{
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.card-text{
+      display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px;
+}
+.hero .title{
+  font-size: 40px;
+}
+.courses{
+  font-size: 1.5rem;
+}
+
+table{
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--paper);
+}
+th{
+  text-align: left;
+}
+thead tr:last-child{
+  background-color: var(--table-head);
+}
+tr{
+  height: 2rem;
+}
+td{
+  padding: 5px;
+}
+.info_schedule .title{
+font-size: 2rem;
+}
+.info_about-clube h2{
+font-size: 1.5rem;
+}
+.write h2{
+  font-size: 1.5rem;
+}
+footer{
+  border-top: var(--border-width) outset var(--overlay);
+  width: 100%;
+  height: 10px;
+}

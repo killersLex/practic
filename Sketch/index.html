@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+    <!-- div.header>div.logo>a[href="#"]^nav>a*4^div.singin>a -->
+    <div class="header">
+        
+        <div class="logo">
+            <a href="#">Sketch</a>
+        </div>
+        
+        <nav>
+            <a href="">Продукт</a>
+            <a href="">Тарифы</a>
+            <a href="">Отзывы</a>
+            <a href="">Поддержка</a>
+        </nav>
+        
+        <div class="singin">
+            <a href="">Войти</a>
+        </div>
+
+    </div>
+    
+    <!-- section.main>span.tag{Макет для отработки}+h1{Вёрстка, которая дышит}+p{Семантика, переменные и адаптив из коробки - без лишнего кода.}+a[href="#"]*2 -->
+    <section class="main">
+        <span class="tag">Макет для отработки</span>
+        <h1>Вёрстка, которая дышит</h1>
+        <p>Семантика, переменные и адаптив из коробки - без лишнего кода.</p>
+        <div>
+            <a href="#">Начать бесплатно</a>
+            <a href="#" asd>Документация</a>
+        </div>
+    </section>
+
+    <!-- section.feedback>form:post>input:text+input:email+input:tel+select>option*4^input:text[readonly]+input:text+input:checkbox+button{Отправить} -->
+    <section class="feedback">
+        <form action="" method="post">
+            <div class="input-grup">
+                <label for="user-name">Имя</label>
+                <input type="text" name="user-name" id="user-name" required placeholder="Как к вам обращаться">
+            </div>
+
+            <div class="input-grup">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="input-grup">
+                <label for="phone-number">Телефон</label>
+                 <input type="tel" name="phone-number" id="phone-number" required placeholder="+7 (___) ___-__-__">
+            </div>
+
+            <div class="input-grup">
+                <label for="city">Город</label>
+                <select name="city" id="city">
+                    <option value="">Выбрать город</option>
+                    <option value="">Москва</option>
+                    <option value="">Санкт-Питербург</option>
+                    <option value="">Сочи</option>
+                </select>
+            </div>
+
+            <div class="input-grup" id="wight">
+                <label for="message-type">Тема обращения</label>
+                <input type="text" name="message-type" id="message-type" required readonly placeholder="Поддержка клиентов">
+                <p>Поле только для чтения</p>
+            </div>
+
+            <div class="input-grup" id="wight">
+                <label for="massage">Cообщение</label>
+                <textarea name="message" id="massage" placeholder="Опешите ситуацию..."></textarea>
+                
+            </div>
+            
+            <div class="input-grup" id="wight">
+                <input type="checkbox" name="Yes, i do" id="Yes, i do" required>
+                <label for="Yes, i do">Согласен с обработкой персоналдьных данных</label>
+            </div>
+            
+            <div></div><button>Отправить</button></div>
+        </form>
+    </section>
+
+    <!-- section.tarifs>table>h2{Сравнение тарифов}+tr>th{asd}*4^tr*5>td{asd}*4 -->
+    <section class="tarifs">
+    <h2>Сравнение тарифов</h2>
+    <div class="tabelwallpaper">
+        
+        <table>      
+            <tr>
+                <th>Возможность</th>
+                <th centr>Старт</th>
+                <th centr>Про</th>
+                <th centr>Команда</th>
+            </tr>
+            <tr>
+                <td>Проекты</td>
+                <td centr>1</td>
+                <td centr>∞</td>
+                <td centr>∞</td>
+            </tr>
+            
+            <tr>
+                <td>Компоненты</td>
+                <td centr>Базовые</td>
+                <td centr>Все</td>
+                <td centr>Все</td>       
+            </tr>
+            
+            <tr>
+                <td>Поддержка</td>
+                <td centr >Сообщество</td>
+                <td centr >Приоритет</td>
+                <td centr >Личный менеджер</td>        
+            </tr>
+            
+            <tr>
+                <td>Участники</td>
+                <td centr >1</td>
+                <td centr >1</td>
+                <td centr >до 10</td>
+            </tr>
+            
+            <tr>
+                <td>Цена в месяц</td>
+                <td centr >0₽</td>
+                <td centr >990₽</td>
+                <td centr >2 900₽</td>
+            </tr>
+        </table>
+    </div>
+    </section>
+
+    <!-- section.reviews>h2{Отзывы}+article.reviews-container>art.review*2>q.rewiews-text+div.autor>div.avatar>img^b.autor-name+p.autor-rank -->
+    <section class="reviews">
+        <h2>Отзывы</h2>
+        <article class="reviews-container">
+            <!-- оригинальные фотки не загрузись по этому закинул иконки божеств из сюжет апартии, что я веду -->
+
+            <article class="review">
+            
+                <q class="rewiews-text">Собрали лендинг за вечер. Переменные - это то, чего мне не хватало всё время</q>
+            
+                <div class="autor">
+            
+                    <div class="avatar">
+                        <img src="./img/Ярнаби.png" alt="">
+                    </div>
+                    <div>
+                        <b class="autor-name">Анна Кузнецова</b>
+                        <p class="autor-rank">Frontend-разработчик</p>
+                    </div>
+            
+                </div>
+            
+            </article>
+            
+            <article class="review">
+            
+                <q class="rewiews-text">Наконец-то семантика и адаптив без боли. Ребята в сделали мой день</q>
+            
+                <div class="autor">
+            
+                    <div class="avatar"><img src="./img/Септим-и-Серпентиус.png" alt=""></div>
+                    <div>
+                        <b class="autor-name">Игорь Петров</b>
+                
+                        <p class="autor-rank">Техлид</p>
+                    </div>
+            
+                </div>
+            
+            </article>
+
+        </article>
+
+    </section>
+
+    <!-- section.about-me>div.team>img^span{О НАС}+h2+p.description{Мы верим, что чистый HTML и акуратный CSS - эта база, с которой начинается любой проет. Никаких лишних обёрток, только ссемантика и здравый смыслю}+a{Узнать больше →} -->
+    <section class="about-me">
+        <img src="./img/магила-марго.png" alt="">
+        <div class="text">
+            <span>О НАС</span>
+            <h2>Делаем вёрстку понятной</h2>
+            <p class="description">Мы верим, что чистый HTML и акуратный CSS - эта база, с которой начинается любой проет. Никаких лишних обёрток, только ссемантика и здравый смыслю</p>
+            <a href="" class="more">Узнать больше →</a>
+
+        </div>
+    </section>
+
+    <!-- section.footer>h3{Подпишись на новости}+p{Раз в неделю пррисылаем один коротеий выпуск о вёрстке.}+form:post>input:email+button{Подписаться}^p{Без Спама. Отписка в один клиик.} -->
+    <section class="footer">
+        <h3>Подпишись на новости</h3>
+        <p>Раз в неделю пррисылаем один коротеий выпуск о вёрстке.</p>
+        <form action="" method="post">
+            <input type="email" name="email" id="email" required placeholder="you@example.com">
+            <button>Подписаться</button>
+        </form>
+        <p>Без Спама. Отписка в один клиик.</p>
+    </section>
+</body>
+</html>
+
